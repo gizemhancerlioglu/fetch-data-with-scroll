@@ -1,16 +1,15 @@
-import './App.css';
+import React, { Component } from 'react'
 import BoxComponent from './BoxComponent';
 
-function App() {
-  return (
-    <div>
-      <BoxComponent />
-      <BoxComponent />
-      <BoxComponent />
+export default class App extends Component {
+  render() {
+    return (
+      <div>
+        <BoxComponent />
+        <BoxComponent />
+        <BoxComponent />
 
-    </div>
-
-  );
+      </div>
+    )
+  }
 }
-
-export default App;
