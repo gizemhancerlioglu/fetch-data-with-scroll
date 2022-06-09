@@ -24,7 +24,7 @@ export default class App extends Component {
   createBoxComponent() {
     const start = this.state.page * 5, end =  (this.state.page + 1) * 5;
     let fivebyfive = this.state.userData.slice(start, end);
-    for (var i = 0; i < 5; i++) {
+    for (var i = 0; i < fivebyfive.length; i++) {
       const component = <BoxComponent key={fivebyfive[i].id} data={fivebyfive[i]} />
       this.setState(prevState => ({
         userBoxes: [...prevState.userBoxes, component]
@@ -56,7 +56,7 @@ export default class App extends Component {
         this.setState({
           page: newPage
         });
-        this.createBoxComponent(newPage);
+        this.createBoxComponent();
       }
     }
   }
